@@ -17,20 +17,27 @@ const Hero = () => {
                 </div>
 
                 <div className="flexColStart hero-desc">
-                    <span >
+                    <span>
                         Find a variety of properties that suit you easily.
                     </span>
                     <span >
                         Forget all difficulties in finding a residence for you.
                     </span>
                 </div>
-
-                <div className="flexCenter search-bar">
-                    <HiLocationMarker color="#28a0cc" size={25} />
-                    <input type="text" />
-                    <button className='button'>Search</button>
+                
+                <div className="flexCenter search flex">
+                    <div> 
+                        <HiLocationMarker className="location-icon" color="#28a0cc" size={25} />
+                    </div>
+                    <div>
+                        <input className="search-bar" type="text" />
+                    </div>
+                    <div>
+                        <button className='button'>Search</button>
+                    </div>
                 </div>
 
+               
 
                 <div className="flexCenter stats">
                     <div className="flexColCenter stat">
