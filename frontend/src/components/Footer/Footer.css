@@ -1,6 +1,7 @@
 .f-container{
     background: #d1eaed;
     justify-content: center;
+    border-top: .5px solid rgba(0,0,0,0.148);
 }
 
 .f-left{
