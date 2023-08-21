@@ -43,11 +43,11 @@ export const createUser = async (email, token) => {
     await api.post(
       `/user/register`,
       { email },
-      {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      }
+      // {
+      //   headers: {
+      //     Authorization: `Bearer ${token}`,
+      //   },
+      // }
     );
   } catch (error) {
     toast.error("Something went wrong, Please try again");
@@ -119,7 +119,6 @@ export const toFav = async (id, email, token) => {
 export const getAllFav = async (email, token) => {
   if(!token) return 
   try{
-
     const res = await api.post(
       `/user/allFav`,
       {
@@ -161,6 +160,27 @@ export const getAllBookings = async (email, token) => {
     
   } catch (error) {
     toast.error("Something went wrong while fetching bookings");
+    throw error
+  }
+}
+
+
+export const createResidency = async (data, token) => {
+  console.log(data)
+  try{
+    const res = await api.post(
+      `/residency/create`,
+      {
+        data
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    )
+  }catch(error)
+  {
     throw error
   }
 }

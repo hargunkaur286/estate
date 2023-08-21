@@ -22,6 +22,10 @@
     display: none;
 }
 
+.img{
+    width: 20px;
+}
+
 @media(max-width: 768px){
     .menu-icon{
         display: block;
