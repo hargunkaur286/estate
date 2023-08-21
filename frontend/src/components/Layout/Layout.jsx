@@ -42,7 +42,7 @@ const Layout = () => {
 
   return (
     <>
-      <div style={{ background: "var(--black)", overflow: "hidden" }}>
+      <div style={{ overflow: "hidden" }}>
         <Header />
         <Outlet />
       </div>
