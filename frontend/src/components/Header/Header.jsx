@@ -5,9 +5,13 @@ import { useState } from 'react';
 import OutsideClickHandler from 'react-outside-click-handler';
 import { Link} from 'react-router-dom'
 import {NavLink} from 'react-router-dom'
+import {useAuth0} from "@auth0/auth0-react"
+import ProfileMenu from '../ProfileMenu/ProfileMenu';
+
 
 const Header = () => {
     const [menuOpened, setMenuOpened]=useState(false);
+    const {loginWithRedirect, isAuthenticated, user, logout} = useAuth0()
     const getMenuStyles= (menuOpened) => {
         if(document.documentElement.clientWidth<= 800){
             return {right: !menuOpened && "-100%"}
@@ -26,7 +30,12 @@ const Header = () => {
                     
                     <NavLink to="/properties">Properties</NavLink>
                         <a href="mailto:hargunkaur2863@gmail.com">Contact</a>
-                    <button className='button'>Login</button>
+                    {
+                        !isAuthenticated ?
+                        <button className='button' onClick={loginWithRedirect}>Login</button> :
+                        <ProfileMenu user={user} logout={logout} />
+                        
+                    }
                 </div>
                 </OutsideClickHandler>
 
