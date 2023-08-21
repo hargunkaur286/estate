@@ -1,6 +1,6 @@
 import React from 'react'
 import { HiLocationMarker } from 'react-icons/hi'
-import '../Hero/Hero.css';
+import './SearchBar.css';
 
 const SearchBar = () => {
   return (
