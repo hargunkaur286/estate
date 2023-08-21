@@ -16,7 +16,7 @@ import BookingModal from "../../components/BookingModal/BookingModal";
 import UserDetailContext from "../../context/UserDetailContext.js";
 import { Button } from "@mantine/core";
 import { toast } from "react-toastify";
-// import Heart from "../../components/Heart/Heart";
+import Heart from "../../components/Heart/Heart";
 const Property = () => {
   const { pathname } = useLocation();
   const id = pathname.split("/").slice(-1)[0];
@@ -69,9 +69,9 @@ const Property = () => {
     <div className="wrapper">
       <div className="flexColStart paddings innerWidth property-container">
         {/* like button */}
-        {/* <div className="like">
+        <div className="like">
           <Heart id={id}/>
-        </div> */}
+        </div>
 
         {/* image */}
         <img src={data?.image} alt="home image" />
