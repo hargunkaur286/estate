@@ -8,6 +8,7 @@ import { FaShower } from "react-icons/fa";
 import { AiTwotoneCar } from "react-icons/ai";
 import { MdLocationPin, MdMeetingRoom } from "react-icons/md";
 import { AiFillHeart } from "react-icons/ai";
+import Map from '../../components/Map/Map';
 // import Heart from "../../components/Heart/Heart";
 
 // import UserDetailContext from "../../context/UserDetailContext.js";
@@ -161,11 +162,11 @@ const Property = () => {
 
                     {/* right side */}
                     <div className="map">
-                        {/* <Map
+                        <Map
                 address={data?.address}
                 city={data?.city}
                 country={data?.country}
-              /> */}
+              />
                     </div>
                 </div>
             </div>
